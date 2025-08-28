@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <style>
+            body {
+                font-family : Times New Roman;
+                text-align: center;
+                background-color: lightblue;
+                color: white;
+            }
+            .dark-mode{
+                background-color: darkblue;
+                color: beige;
+            }
+            .dark-mode-button{
+                font-family : Times New Roman;
+                background-color: darkblue;
+                border: none;
+                color: beige;
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            #main_label{
+                font-size:24px;
+                font-weight:bold;
+            }
+            #labels {
+                font-size:20px;
+                font-weight:bold;
+            }
+            #descripiton {
+                font-size:24px;
+            }
+            #photo {
+                height: 180px;
+                width: 170px;
+                background-size: cover;
+                top: 110px;
+                left:680px;
+            }
+            #accordion_item1 {
+                display:none;
+            }
+            #accordion_item2 {
+                display:none;
+            }
+            button{
+                font-family : Times New Roman;
+                background-color: lightblue;
+                border: none;
+                color: white;
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            ol{
+                font-size:20px;
+                text-align: center;
+                padding: 300px;
+                padding-top: 0px;
+            }
+        </style>
+        <script>
+            function myFunction1(id){
+                var x=document.getElementById(id);
+                if(x.style.display==="none"){
+                    x.style.display="block";
+                }
+                else{
+                    x.style.display="none";
+                }
+            }
+             function myFunction2(){
+                var element1= document.body;
+                element1.classList.toggle("dark-mode");
+                var element2= document.getElementsById("button");
+                element2.classList.toggle("dark-mode-button");
+             }
+        </script>
+    </head>
+    <body>
+        <button id="button" onclick="myFunction2()">Change Mode</button><br>
+        <img id= "photo" src="id.jpg">
+        <div id="main_label">Basic Information:</div>
+        <div id="labels">Name:</div>
+        <div id="description">Prakriti Shrestha</div>
+        <div id="labels">Email:</div>
+        <div id="description">Pra0000kri@gmail.com</div>
+        <div id="labels">Phone Number:</div>
+        <div id="description">9847344701</div>
+        <div id="labels">Bio:</div>
+        <div id="description">Hi, I am a 6th sem CSIT student who loves to read books and watch plays. Other than that i also crochet and love baking and cooking.</div>
+        <button id="button" onclick="myFunction1('accordion_item1')" >Education:</button><br>
+        <div id="accordion_item1">
+            <div id="labels">SEE:</div>
+            <div id="description">Excelsior School,Swoyambhu</div>
+            <div id="labels">+2:</div>
+            <div id="description">MOHLISS, Kumaripati</div>
+            <div id="labels">Bachelors:</div>
+            <div id="description">St. Xavier's College, Maitighar</div>
+        </div>
+        <button id="button" onclick="myFunction1('accordion_item2')">Hobbies:</button>
+        <div id="accordion_item2">
+            <div id="labels">The list of my hobbies are:</div>
+            <ol>
+                <li>Reading</li>
+                <li>Writing</li>
+                <li>Crocheting</li>
+                <li>Cooking</li>
+                <li>Baking</li>
+            </ol>
+        </div>
+    </body>
+</html>
